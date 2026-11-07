@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport optimizado para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Stand de las Palomitas y Algodón | Servicio Dulce para Eventos</title>
+    <meta name="description" content="Servicio exclusivo de palomitas de maíz y algodón de azúcar en vasito para eventos desde $60.000. Stand personalizado e ilimitado por 3 horas. ¡Cotiza por WhatsApp!">
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stand de las Palomitas | Eventos Inolvidables">
+    <meta property="og:description" content="Llevamos dulzura y diversión a tus celebraciones con stands personalizados, palomitas de maíz y algodón de azúcar en vasitos individuales.">
+    <meta property="og:image" content="logo1.jpeg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#FF70A6',
+                            'pink-light': '#FFD9E8',
+                            'pink-soft': '#FFF0F5',
+                            blue: '#70D6FF',
+                            'blue-light': '#E6F8FF',
+                            yellow: '#FFD670',
+                            purple: '#A594F9',
+                            dark: '#2B2D42',
+                            gray: '#5C677D'
+                        }
+                    },
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'sweet': '0 10px 30px -5px rgba(255, 112, 166, 0.2)',
+                        'sweet-lg': '0 20px 40px -10px rgba(255, 112, 166, 0.3)',
+                        'card': '0 8px 24px -4px rgba(0, 0, 0, 0.06)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Correcciones y mejoras específicas para pantallas móviles */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .blob-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 217, 232, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+
+        .pulse-subtle {
+            animation: pulse-subtle 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Modal lightbox animation */
+        .modal-active {
+            display: flex !important;
+            animation: fadeIn 0.25s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Mejora táctil para carruseles o botones móviles */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-slate-50 antialiased selection:bg-brand-pink-light selection:text-brand-pink">
+
+    <!-- ==================== A. ENCABEZADO Y NAVEGACIÓN ==================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-pink-100 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                
+                <!-- Logo Identidad -->
+                <a href="#inicio" class="flex items-center gap-2.5 group">
+                    <img src="logo1.jpeg" alt="Logo Stand de las Palomitas" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-brand-pink shadow-md group-hover:scale-105 transition-transform object-cover">
+                    <div>
+                        <span class="font-fredoka text-base sm:text-xl font-bold text-slate-800 leading-tight block">Stand de las Palomitas</span>
+                        <span class="text-[10px] sm:text-xs font-semibold text-brand-pink tracking-wider block uppercase">& Algodón de Azúcar</span>
+                    </div>
+                </a>
+
+                <!-- Navegación Desktop -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                    <a href="#inicio" class="hover:text-brand-pink transition-colors">Inicio</a>
+                    <a href="#servicio" class="hover:text-brand-pink transition-colors">Nuestro Servicio</a>
+                    <a href="#beneficios" class="hover:text-brand-pink transition-colors">Beneficios</a>
+                    <a href="#precios" class="hover:text-brand-pink transition-colors">Precios</a>
+                    <a href="#stand" class="hover:text-brand-pink transition-colors">Stand Temático</a>
+                    <a href="#galeria" class="hover:text-brand-pink transition-colors">Galería Real</a>
+                </nav>
+
+                <!-- CTA Desktop -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20interesa%20contratar%20el%20servicio%20de%20palomitas%20y%20algod%C3%B3n%20de%20az%C3%BAcar%20para%20un%20evento.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-5 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Cotiza tu evento</span>
+                    </a>
+                </div>
+
+                <!-- Botón Menú Mobile optimizado -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="p-3 rounded-xl text-slate-700 hover:text-brand-pink hover:bg-pink-50 focus:outline-none active:scale-95 transition-transform">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Menú Mobile Fluido -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/98 backdrop-blur-md border-b border-pink-100 px-5 pt-3 pb-8 space-y-4 shadow-2xl transition-all">
+            <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Inicio</a>
+            <a href="#servicio" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Nuestro Servicio</a>
+            <a href="#beneficios" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Beneficios</a>
+            <a href="#precios" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Precios</a>
+            <a href="#stand" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Stand Temático</a>
+            <a href="#galeria" class="mobile-nav-link block px-4 py-3 rounded-xl font-bold text-slate-700 hover:bg-pink-50 hover:text-brand-pink text-base">Galería Real</a>
+            <div class="pt-3">
+                <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20interesa%20contratar%20el%20servicio%20de%20palomitas%20y%20algod%C3%B3n%20de%20az%C3%BAcar%20para%20un%20evento.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white py-4 rounded-2xl font-bold text-base shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Cotiza por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 sm:pt-20">
+
+        <!-- ==================== B. SECCIÓN PRINCIPAL (HERO) ==================== -->
+        <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-brand-pink-soft via-white to-white py-10 sm:py-16 lg:py-24">
+            <div class="absolute top-10 left-10 w-48 sm:w-64 h-48 sm:h-64 bg-pink-200/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-60 sm:w-80 h-60 sm:h-80 bg-cyan-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Textos Hero -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white shadow-sm border border-pink-200 text-brand-pink text-xs sm:text-sm font-semibold mb-5">
+                            <span class="flex h-2 w-2 rounded-full bg-brand-pink animate-ping"></span>
+                            <span>Servicio Ilimitado 3 Horas • Desde $60.000</span>
+                        </div>
+                        
+                        <h1 class="font-fredoka text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-4 sm:mb-6">
+                            ¡Hacemos de cada evento un momento <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-purple">delicioso e inolvidable!</span>
+                        </h1>
+                        
+                        <p class="font-fredoka text-lg sm:text-xl text-brand-pink font-medium mb-3 sm:mb-4">
+                            Palomitas + Algodón de Azúcar en Vasitos. Dulzura, higiene y comodidad para los más pequeños.
+                        </p>
+                        
+                        <p class="text-slate-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Llevamos sabor, alegría y una experiencia diferente a tus celebraciones. Nos encargamos de preparar y entregar palomitas y algodón de azúcar en prácticos vasitos durante 3 horas, con un stand personalizado para tu fiesta.
+                        </p>
+                        
+                        <p class="text-slate-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Llevamos sabor, alegría y una experiencia diferente a tus celebraciones. Nos encargamos de preparar y entregar palomitas y algodón de azúcar durante 3 horas, con un stand personalizado que se adapta a la temática de tu evento.
+                        </p>
+
+                        <!-- Botones de Acción (Táctiles adaptados a pulgar) -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+                            <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20interesa%20contratar%20el%20servicio%20de%20palomitas%20y%20algod%C3%B3n%20de%20az%C3%BAcar%20para%20un%20evento.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg shadow-sweet active:scale-95 transition-all">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>¡Cotiza tu evento aquí!</span>
+                            </a>
+                            
+                            <a href="#servicio" 
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-6 py-4 rounded-2xl font-bold text-base sm:text-lg shadow-sm active:scale-95 transition-all">
+                                <span>Conoce nuestro servicio</span>
+                                <i class="fa-solid fa-arrow-down text-sm"></i>
+                            </a>
+                        </div>
+
+                        <!-- Micro Badges Mobile (Grid de 3 adaptado) -->
+                        <div class="mt-8 sm:mt-10 grid grid-cols-3 gap-2 sm:gap-4 border-t border-pink-100 pt-6 max-w-lg mx-auto lg:mx-0">
+                            <div class="text-center p-2 rounded-xl bg-white/60 shadow-xs">
+                                <i class="fa-solid fa-clock text-brand-pink text-lg sm:text-xl mb-1 block"></i>
+                                <p class="text-[11px] sm:text-xs font-bold text-slate-700">3 Horas Continuas</p>
+                            </div>
+                            <div class="text-center p-2 rounded-xl bg-white/60 shadow-xs">
+                                <i class="fa-solid fa-infinity text-brand-blue text-lg sm:text-xl mb-1 block"></i>
+                                <p class="text-[11px] sm:text-xs font-bold text-slate-700">Consumo Ilimitado</p>
+                            </div>
+                            <div class="text-center p-2 rounded-xl bg-white/60 shadow-xs">
+                                <i class="fa-solid fa-wand-magic-sparkles text-brand-purple text-lg sm:text-xl mb-1 block"></i>
+                                <p class="text-[11px] sm:text-xs font-bold text-slate-700">Stand Personalizable</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fotografía Protagonista Hero -->
+                    <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+                        <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+                            <div class="absolute -inset-2 sm:-inset-4 bg-gradient-to-tr from-brand-pink to-brand-blue rounded-3xl opacity-25 blur-lg"></div>
+                            <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
+                                <img src="stand1.jpeg" 
+                                     alt="Stand de las Palomitas temático de Bluey" 
+                                     class="w-full h-[340px] sm:h-[440px] object-cover">
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-5 text-white">
+                                    <span class="bg-brand-pink text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-1.5 inline-block">Stand Real Realizado</span>
+                                    <h3 class="font-fredoka text-lg sm:text-xl font-bold">Stands 100% Personalizados</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== C. PRESENTACIÓN DEL SERVICIO ==================== -->
+        <section id="servicio" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Lo Que Ofrecemos</span>
+                    <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                        Un toque dulce que hace la diferencia
+                    </h2>
+                    <p class="text-slate-600 text-base sm:text-lg">
+                        Ofrecemos un servicio integral pensado para complementar tus celebraciones, sorprender a los invitados y crear momentos especiales con nuestros dos productos estrellas recién hechos.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    
+                    <!-- Tarjeta Producto 1: Palomitas -->
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50/40 rounded-3xl p-6 sm:p-8 border border-amber-100 shadow-card">
+                        <div class="relative h-52 sm:h-64 rounded-2xl overflow-hidden mb-6 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Palomitas de maíz calientes y crujientes" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-amber-600 font-bold text-xs uppercase shadow">
+                                Recién Hechas
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-xl">
+                                🍿
+                            </div>
+                            <h3 class="font-fredoka text-2xl font-bold text-slate-800">Palomitas de Maíz</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-sm sm:text-base">
+                            Crujientes, calientes y recién preparadas en el lugar. El aroma inconfundible que fascina a grandes y chicos durante toda la fiesta.
+                        </p>
+                        <ul class="space-y-2.5 text-xs sm:text-sm font-semibold text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Preparadas al instante</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Presentación limpia y atractiva</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Ideales para compartir</li>
+                        </ul>
+                        <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Quiero%20cotizar%20el%20stand%20de%20palomitas%20de%20ma%C3%ADz%20para%20mi%20evento." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 text-amber-600 font-bold hover:text-amber-700 text-sm sm:text-base">
+                            <span>Consultar por Palomitas</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Producto 2: Algodón de Azúcar -->
+                    <div class="bg-gradient-to-br from-pink-50 to-purple-50/40 rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-card">
+                        <div class="relative h-52 sm:h-64 rounded-2xl overflow-hidden mb-6 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Algodón de azúcar esponjoso y colorido" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-brand-pink font-bold text-xs uppercase shadow">
+                                Esponjoso & Magico
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-pink text-white flex items-center justify-center font-bold text-xl">
+                                🍭
+                            </div>
+                            <h3 class="font-fredoka text-2xl font-bold text-slate-800">Algodón de Azúcar</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-sm sm:text-base">
+                    <!-- Tarjeta Producto 2: Algodón de Azúcar en Vasitos -->
+                    <div class="bg-gradient-to-br from-pink-50 to-purple-50/40 rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-card">
+                        <div class="relative h-52 sm:h-64 rounded-2xl overflow-hidden mb-6 shadow-md">
+                            <img src="stand3.jpg" 
+                                 alt="Algodón de azúcar servido en vasitos prácticos" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-brand-pink font-bold text-xs uppercase shadow">
+                                En Vasito Móvil & Seguro
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-pink text-white flex items-center justify-center font-bold text-xl">
+                                🍭
+                            </div>
+                            <h3 class="font-fredoka text-2xl font-bold text-slate-800">Algodón de Azúcar en Vasito</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-sm sm:text-base">
+                            Elaborado al momento y <strong class="text-slate-800">entregado en vasitos individuales</strong> para mayor comodidad, higiene y seguridad de los más pequeños durante la fiesta.
+                        </p>
+                        <ul class="space-y-2.5 text-xs sm:text-sm font-semibold text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-pink"></i> Formato en vasito: ideal para niños pequeños</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-pink"></i> Evita manos pegajosas y derrames</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-pink"></i> Diferentes colores y sabores atractivos</li>
+                        </ul>
+                        <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Quiero%20cotizar%20el%20stand%20de%20algod%C3%B3n%20en%20vasito%20y%20palomitas%20para%20mi%20evento." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 text-brand-pink font-bold hover:text-pink-600 text-sm sm:text-base">
+                            <span>Consultar disponibilidad</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN PRECIOS Y TARIFAS ==================== -->
+        <section id="precios" class="py-14 sm:py-16 bg-gradient-to-r from-pink-50 via-purple-50 to-cyan-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Precios Transparentes</span>
+                <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                    Cotizaciones según tu cantidad de invitados
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+                    Nuestros valores comienzan desde <span class="font-bold text-brand-pink text-xl">$60.000</span>. El precio final se ajusta a la cantidad estimada de personas y requerimientos de tu celebración.
+                </p>
+
+                <div class="max-w-xl mx-auto bg-white p-6 sm:p-8 rounded-3xl border border-pink-200 shadow-sweet text-left relative overflow-hidden">
+                    <div class="absolute -right-8 -top-8 w-24 h-24 bg-brand-pink-light rounded-full opacity-50"></div>
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 uppercase">Tarifa Base</span>
+                            <h3 class="font-fredoka text-2xl font-bold text-slate-800">Desde $60.000</h3>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">3 Horas Ilimitadas</span>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-600 mb-6">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-pink font-bold"></i> Palomitas de maíz ilimitadas y recién hechas.</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-pink font-bold"></i> Algodón de azúcar entregado en vasitos cómodos y seguros.</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-pink font-bold"></i> Stand temático decorado a tu gusto.</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-pink font-bold"></i> Operador a cargo durante todo el evento.</li>
+                    </ul>
+                    <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20el%20servicio%20para%20un%20evento%20de%20[Escribe%20la%20cantidad]%20personas." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold py-3.5 rounded-xl shadow-md hover:from-emerald-600 hover:to-teal-700 transition-all">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Solicitar Cotización Exacta</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== E. PERSONALIZACIÓN DEL STAND ==================== -->
+        <section id="stand" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                    
+                    <!-- Texto Stand -->
+                    <div class="lg:col-span-6">
+                        <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Decoración Adaptable</span>
+                        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-5 sm:mb-6">
+                            Tu evento, tu temática, nuestro stand
+                        </h2>
+                        <p class="text-slate-600 text-base sm:text-lg mb-6 leading-relaxed">
+                            Cada celebración tiene su propio estilo. Por eso, adaptamos el frontis y la mantelería de nuestro stand para integrarnos perfectamente a personajes como Bluey, Las Chicas Superpoderosas, Fiestas Patrias o cualquier motivo que elijas.
+                        </p>
+                        
+                        <div class="space-y-3.5 mb-8">
+                            <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-pink-100 text-brand-pink flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-palette text-base sm:text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Montajes Temáticos Reales</h4>
+                                    <p class="text-xs sm:text-sm text-slate-600">Personalizamos el faldón y los adornos con el personaje o colores que desees.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm">
+                                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-100 text-brand-blue flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-box-open text-base sm:text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Presentación Higiénica</h4>
+                                    <p class="text-xs sm:text-sm text-slate-600">Recipientes limpios, frascos ordenados y vasitos individuales para los algodones.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20consultar%20por%20la%20personalizaci%C3%B3n%20del%20stand%20para%20la%20tem%C3%A1tica%20de%20mi%20evento." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-pink hover:bg-pink-600 text-white font-bold px-7 py-4 rounded-2xl shadow-sweet text-base active:scale-95 transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Consulta por tu temática</span>
+                        </a>
+                    </div>
+
+                    <!-- Fotografías Reales de Stands -->
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white">
+                                <img src="stand1.jpeg" alt="Stand Temático Bluey" class="w-full h-48 sm:h-60 object-cover">
+                            </div>
+                            <div class="p-3 bg-pink-50 rounded-2xl text-center border border-pink-100">
+                                <span class="text-xs font-bold text-brand-pink block">Temática Bluey</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white">
+                                <img src="stand2.jpeg" alt="Stand Chicas Superpoderosas" class="w-full h-48 sm:h-60 object-cover">
+                            </div>
+                            <div class="p-3 bg-cyan-50 rounded-2xl text-center border border-cyan-100">
+                                <span class="text-xs font-bold text-brand-blue block">Chicas Superpoderosas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== F. TIPOS DE EVENTOS ==================== -->
+        <section class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Versatilidad</span>
+                    <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                        Estamos presentes en tus mejores momentos
+                    </h2>
+                    <p class="text-slate-600 text-base sm:text-lg">
+                        Diseñado tanto para niños como para adultos. Adaptamos nuestro servicio al formato de tu celebración.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                    
+                    <!-- Tarjeta Evento 1 -->
+        <!-- ==================== G. GALERÍA FOTOGRÁFICA REAL ==================== -->
+        <section id="galeria" class="py-16 sm:py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+                    <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Galería Real</span>
+                    <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                        Fotografías de Nuestros Eventos Realizados
+                    </h2>
+                    <p class="text-slate-600 text-base sm:text-lg">
+                        Conoce nuestros montajes reales, la presentación impecable y el formato de vasitos de algodón.
+                    </p>
+                </div>
+
+                <!-- Grid Galería con Fotos Reales -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                    
+                    <!-- Foto Real 1 -->
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group border border-slate-100" onclick="openLightbox(this)">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="stand1.jpeg" alt="Stand Temático Bluey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold text-brand-pink block uppercase">Cumpleaños Infantil</span>
+                            <h4 class="font-bold text-slate-800 text-base">Stand Temático de Bluey</h4>
+                        </div>
+                    </div>
+
+                    <!-- Foto Real 2 -->
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group border border-slate-100" onclick="openLightbox(this)">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="stand2.jpeg" alt="Stand Chicas Superpoderosas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold text-brand-blue block uppercase">Fiesta Temática</span>
+                            <h4 class="font-bold text-slate-800 text-base">Stand Las Chicas Superpoderosas</h4>
+                        </div>
+                    </div>
+
+                    <!-- Foto Real 3 -->
+                    <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md cursor-pointer group border border-slate-100" onclick="openLightbox(this)">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="stand3.jpg" alt="Stand Fiestas Patrias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold text-red-500 block uppercase">Celebración Especial</span>
+                            <h4 class="font-bold text-slate-800 text-base">Montaje con Algodón en Vasitos</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== G. GALERÍA FOTOGRÁFICA ==================== -->
+        <section id="galeria" class="py-16 sm:py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+                    <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Galería Visual</span>
+                    <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                        Momentos dulces que merecen recordarse
+                    </h2>
+                    <p class="text-slate-600 text-base sm:text-lg">
+                        Explora la presentación de nuestros productos, los montajes temáticos y la calidad del servicio.
+                    </p>
+
+                    <!-- Nota aclaratoria de reemplazo de imágenes -->
+                    <div class="mt-4 p-3 bg-pink-50 border border-pink-200 rounded-xl text-xs text-slate-600 inline-block">
+                        <i class="fa-solid fa-circle-info text-brand-pink mr-1"></i>
+                        <span>Fotografías de referencia técnica. Reemplazables por imágenes definitivas.</span>
+                    </div>
+                </div>
+
+                <!-- Filtros de Galería (Desplazables horizontalmente en móvil) -->
+                <div class="flex items-center justify-start sm:justify-center gap-2 mb-8 overflow-x-auto no-scrollbar pb-2 px-1">
+                    <button class="gallery-filter active px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-brand-pink text-white shrink-0 transition-all shadow-sm" data-filter="all">Todos</button>
+                    <button class="gallery-filter px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-white text-slate-600 hover:bg-pink-50 shrink-0 transition-all shadow-sm" data-filter="palomitas">Palomitas</button>
+                    <button class="gallery-filter px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-white text-slate-600 hover:bg-pink-50 shrink-0 transition-all shadow-sm" data-filter="algodon">Algodón de Azúcar</button>
+                    <button class="gallery-filter px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-white text-slate-600 hover:bg-pink-50 shrink-0 transition-all shadow-sm" data-filter="stands">Stands & Montajes</button>
+                </div>
+
+                <!-- Grid Galería -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="gallery-grid">
+                    
+                    <!-- Item 1 -->
+                    <div class="gallery-item stands bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1585647347483-22b66260dfff?auto=format&fit=crop&w=800&q=80" alt="Stand decorado" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-pink block uppercase">Stand Decorado</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Montaje para Evento</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="gallery-item palomitas bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=800&q=80" alt="Palomitas" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-amber-500 block uppercase">Palomitas</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Cajas de Palomitas Frescas</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="gallery-item algodon bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=800&q=80" alt="Algodón de azúcar" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-purple block uppercase">Algodón de Azúcar</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Elaboración en Vivo</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="gallery-item stands bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Montaje temático" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-pink block uppercase">Montajes</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Ambientación Temática</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="gallery-item palomitas bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?auto=format&fit=crop&w=800&q=80" alt="Porciones de palomitas" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-amber-500 block uppercase">Palomitas</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Servicio Continuo</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="gallery-item algodon bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Algodones rosados" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-purple block uppercase">Algodón de Azúcar</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Presentación Dulce</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="gallery-item stands bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Stand al aire libre" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-pink block uppercase">Stands</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Eventos al Aire Libre</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="gallery-item stands bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer group" onclick="openLightbox(this)">
+                        <div class="relative h-52 sm:h-60 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Ambiente festivo" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="p-3.5 sm:p-4">
+                            <span class="text-[10px] sm:text-xs font-bold text-brand-blue block uppercase">Celebración</span>
+                            <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Ambiente Festivo</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-slate-950/90 z-50 hidden items-center justify-center p-4">
+            <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-pink transition-colors p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl">
+                <img id="lightbox-img" src="" alt="Vista ampliada" class="w-full max-h-[70vh] object-contain bg-slate-900">
+                <div class="p-4 bg-white text-center">
+                    <p id="lightbox-caption" class="font-bold text-slate-800 text-base sm:text-lg"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== H. SECCIÓN DE CONFIANZA ==================== -->
+        <section class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-brand-pink/10 rounded-3xl transform rotate-3"></div>
+                            <div class="relative bg-gradient-to-tr from-brand-pink-soft to-brand-blue-light p-6 sm:p-8 rounded-3xl border border-pink-100 shadow-md">
+                                <h3 class="font-fredoka text-xl sm:text-2xl font-bold text-slate-800 mb-5">Nuestros Valores</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3">
+                                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-pink text-white flex items-center justify-center shrink-0 mt-0.5">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-slate-800 block text-sm sm:text-base">Responsabilidad y Compromiso</strong>
+                                            <p class="text-xs text-slate-600">Puntualidad en la llegada y montaje listo antes del evento.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-pink text-white flex items-center justify-center shrink-0 mt-0.5">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-slate-800 block text-sm sm:text-base">Atención Cercana y Amable</strong>
+                                            <p class="text-xs text-slate-600">Personal calificado para interactuar amablemente con tus invitados.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-pink text-white flex items-center justify-center shrink-0 mt-0.5">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <strong class="text-slate-800 block text-sm sm:text-base">Higiene y Calidad Garantizada</strong>
+                                            <p class="text-xs text-slate-600">Insumos de primera calidad y manipulación limpia de los alimentos.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <span class="text-brand-pink font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Compromiso Total</span>
+                        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-slate-800 mb-5 sm:mb-6">
+                            Nos preocupamos de cada detalle
+                        </h2>
+                        <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
+                            Nuestro compromiso es que cada cliente disfrute de una experiencia satisfactoria. Cuidamos cada detalle para que nuestros productos y nuestro stand se conviertan en uno de los atractivos de tu celebración.
+                        </p>
+                        <p class="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+                            Sabemos lo importante que es tu fiesta. Por eso, operamos con maquinaria impecable, atención rápida para evitar largas filas y la mejor disposición para adaptarnos al espacio disponible.
+                        </p>
+
+                        <!-- Área de Testimonios Futuros -->
+                        <div class="border-t border-slate-100 pt-5">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2.5">Sección de Reseñas Reales</span>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-dashed border-slate-200 text-slate-500 text-xs sm:text-sm flex items-center gap-3">
+                                <i class="fa-regular fa-comment-dots text-brand-pink text-xl shrink-0"></i>
+                                <span>Espacio reservado para opiniones y comentarios de nuestros próximos clientes.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== I. LLAMADO A LA ACCIÓN FINAL (CTA) ==================== -->
+        <section class="py-16 sm:py-20 bg-gradient-to-r from-brand-pink via-purple-500 to-brand-blue text-white relative overflow-hidden text-center">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl sm:text-3xl mx-auto mb-5 sm:mb-6">
+                    🎉
+                </div>
+                
+                <h2 class="font-fredoka text-3xl sm:text-5xl font-bold mb-5 sm:mb-6 leading-tight">
+                    ¡Hagamos que tu celebración sea inolvidable!
+                </h2>
+                
+                <p class="text-base sm:text-xl text-white/95 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-medium">
+                    Cuéntanos qué evento estás organizando y preparemos una propuesta especial para ti. Solicita tu cotización personalizada y reserva tu fecha con anticipación.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20interesa%20contratar%20el%20servicio%20de%20palomitas%20y%20algod%C3%B3n%20de%20az%C3%BAcar%20para%20un%20evento.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-2xl font-bold text-base sm:text-lg shadow-xl active:scale-95 transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-500"></i>
+                        <span>¡Quiero cotizar mi evento!</span>
+                    </a>
+                </div>
+
+                <p class="text-[11px] sm:text-xs text-white/85 mt-5 font-medium">
+                    <i class="fa-solid fa-lock text-xs mr-1"></i> Sin compromisos inmediatos. Cotizaciones a tu medida.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== J. PIE DE PÁGINA (FOOTER) ==================== -->
+    <footer class="bg-slate-900 text-white pt-12 sm:pt-16 pb-20 sm:pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+                
+                <!-- Columna 1: Marca -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo1.jpeg" alt="Logo Stand de las Palomitas" class="w-10 h-10 rounded-full border border-brand-pink object-cover">
+                        <span class="font-fredoka text-lg sm:text-xl font-bold">Stand de las Palomitas</span>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm mb-5 leading-relaxed">
+                        Llevamos el mejor servicio de palomitas de maíz y algodón de azúcar en vasito ilimitado desde $60.000 para hacer de tus fiestas momentos memorables.
+                    </p>
+                    <p class="text-brand-pink font-fredoka font-semibold text-xs sm:text-sm">
+                        «Dulzura, diversión y sonrisas para celebrar en grande»
+                    </p>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div>
+                    <h4 class="font-fredoka text-base sm:text-lg font-bold mb-3 sm:mb-4 text-slate-200">Navegación</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+                        <li><a href="#inicio" class="hover:text-brand-pink transition-colors">Inicio</a></li>
+                        <li><a href="#servicio" class="hover:text-brand-pink transition-colors">Nuestro Servicio</a></li>
+                        <li><a href="#beneficios" class="hover:text-brand-pink transition-colors">Beneficios</a></li>
+                        <li><a href="#stand" class="hover:text-brand-pink transition-colors">Stand Temático</a></li>
+                        <li><a href="#galeria" class="hover:text-brand-pink transition-colors">Galería de Fotos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Servicios -->
+                <div>
+                    <h4 class="font-fredoka text-base sm:text-lg font-bold mb-3 sm:mb-4 text-slate-200">Servicios Incluidos</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+                        <li>• 3 Horas de servicio continuo</li>
+                        <li>• Consumo 100% ilimitado</li>
+                        <li>• Stand adaptado a la temática</li>
+                        <li>• Productos recién elaborados</li>
+                        <li>• Operador capacitado e higiene</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto Directo -->
+                <div>
+                    <h4 class="font-fredoka text-base sm:text-lg font-bold mb-3 sm:mb-4 text-slate-200">Contacto Directo</h4>
+                    <p class="text-xs sm:text-sm text-slate-400 mb-3">¿Dudas o disponibilidad para tu fecha?</p>
+                    <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20hacer%20una%20consulta%20directa%20sobre%20el%20servicio." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all w-full justify-center mb-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>+56 9 8212 8769</span>
+                    </a>
+                    <span class="text-[11px] text-slate-500 block text-center">Atención rápida por WhatsApp</span>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-slate-800 pt-6 sm:pt-8 text-center text-[11px] sm:text-xs text-slate-500">
+                <p>&copy; Stand de las Palomitas y Algodón de Azúcar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÓN FLOTANTE DE WHATSAPP (Móvil optimizado) ==================== -->
+    <a href="https://wa.me/56982128769?text=%C2%A1Hola!%20Me%20interesa%20contratar%20el%20servicio%20de%20palomitas%20y%20algod%C3%B3n%20de%20az%C3%BAcar%20para%20un%20evento.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-5 right-5 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-2xl active:scale-95 transition-transform group">
+        <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg hidden sm:block">
+            ¡Cotiza por WhatsApp!
+        </span>
+    </a>
+
+    <!-- ==================== JAVASCRIPT LÓGICA & INTERACTIVIDAD ==================== -->
+    <script>
+        // Lógica del Menú Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú mobile al hacer click en un enlace
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Filtro interactivo de la galería
+        const filterBtns = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-pink', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.add('active', 'bg-brand-pink', 'text-white');
+                btn.classList.remove('bg-white', 'text-slate-600');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Modal para amplificar imágenes
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const title = element.querySelector('h4').innerText;
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCaption.innerText = title;
+            
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('modal-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('modal-active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Sombra de header al hacer scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
